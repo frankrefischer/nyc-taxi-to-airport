@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f9d15f-7b0a-4937-81e4-107e6f4e21ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/step_2_extract_trips_to_airport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step_1_download_raw_data.sh" beforeDir="false" afterPath="$PROJECT_DIR$/step_1_download_raw_data.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +41,13 @@
           <entry key="Python Console" value="79" />
           <entry key="gitignore" value="9" />
           <entry key="py" value="3087" />
-          <entry key="sh" value="164" />
+          <entry key="sh" value="300" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="70" />
+          <entry key="Bash" value="206" />
           <entry key="PLAIN_TEXT" value="104" />
           <entry key="Python" value="3166" />
         </counts>
@@ -55,19 +56,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/step_1_download_raw_data.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="39" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="39" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/step_2_extract_trips_to_airport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="561">
               <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -104,9 +105,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/step_1_download_raw_data.py" />
-        <option value="$PROJECT_DIR$/step_1_download_raw_data.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/step_2_extract_trips_to_airport.py" />
+        <option value="$PROJECT_DIR$/step_1_download_raw_data.sh" />
       </list>
     </option>
   </component>
@@ -257,13 +258,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281493" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3281493" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32970452" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32970452" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3281493" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3281493" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3281493" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -328,13 +329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step_1_download_raw_data.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Anaconda3_64/Lib/gzip.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -351,12 +345,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/step_2_extract_trips_to_airport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="561">
           <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <marker date="1541288377711" expanded="true" signature="1080:1142" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step_1_download_raw_data.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

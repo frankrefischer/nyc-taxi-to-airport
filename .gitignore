@@ -1,1 +1,2 @@
-*.cvs.gz
+/*.cvs.gz
+/data

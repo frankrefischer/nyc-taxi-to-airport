@@ -1,0 +1,33 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\python.exe" C:/Users/fisch/PycharmProjects/nyc-taxi-to-airport/step_3_clean_data.py
+=== nyc taxi to airport - step 3 clean data
+loading file: nyc-2017-yellow-taxi-trips-to-airport.cvs.gz
+100,000 lines read | time 18s
+200,000 lines read | time 37s
+300,000 lines read | time 55s
+400,000 lines read | time 74s
+500,000 lines read | time 93s
+600,000 lines read | time 111s
+700,000 lines read | time 130s
+800,000 lines read | time 150s
+900,000 lines read | time 169s
+1,000,000 lines read | time 187s
+1,100,000 lines read | time 206s
+1,200,000 lines read | time 225s
+1,300,000 lines read | time 244s
+1,400,000 lines read | time 263s
+1,500,000 lines read | time 282s
+1,600,000 lines read | time 302s
+1,700,000 lines read | time 321s
+1,800,000 lines read | time 340s
+1,900,000 lines read | time 360s
+2,000,000 lines read | time 379s
+2,100,000 lines read | time 398s
+2,200,000 lines read | time 417s
+2,300,000 lines read | time 436s
+2,400,000 lines read | time 455s
+2,500,000 lines read | time 473s
+2,533,072 lines read | time 480s
+saving file: nyc-2017-yellow-taxi-trips-to-airport.pkl.gz
+done
+
+Process finished with exit code 0

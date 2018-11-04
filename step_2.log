@@ -1,0 +1,18 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\python.exe" C:/Users/fisch/PycharmProjects/nyc-taxi-to-airport/step_2_extract_trips_to_airport.py
+loading file: nyc-2017-yellow-taxi-trips.cvs.gz
+time 19s | 10,000,000 lines read in | 222,622 lines selected
+time 38s | 20,000,000 lines read in | 467,448 lines selected
+time 59s | 30,000,000 lines read in | 706,344 lines selected
+time 80s | 40,000,000 lines read in | 932,478 lines selected
+time 101s | 50,000,000 lines read in | 1,166,319 lines selected
+time 123s | 60,000,000 lines read in | 1,401,412 lines selected
+time 144s | 70,000,000 lines read in | 1,636,481 lines selected
+time 166s | 80,000,000 lines read in | 1,860,261 lines selected
+time 188s | 90,000,000 lines read in | 2,058,773 lines selected
+time 210s | 100,000,000 lines read in | 2,244,486 lines selected
+time 231s | 110,000,000 lines read in | 2,451,356 lines selected
+time 239s | 113,496,874 lines read in | 2,533,072 lines selected
+saving file: nyc-2017-yellow-taxi-trips-to-airport.cvs.gz
+done
+
+Process finished with exit code 0

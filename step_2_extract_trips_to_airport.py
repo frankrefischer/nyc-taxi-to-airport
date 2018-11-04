@@ -9,7 +9,7 @@ def main():
 
         return df[df.DOLocationID.isin(nyc_airports)]
 
-    input_file = 'nyc-2017-yellow-taxi-trips.csv.gz'
+    input_file = 'nyc-2017-yellow-taxi-trips.cvs.gz'
     output_file = 'nyc-2017-yellow-taxi-trips-to-airport.csv.gz'
 
     if os.path.exists(output_file):

@@ -1,4 +1,6 @@
-/*.cvs.gz
+/*.csv
+/*.gz
 /data/**
 /data2/**
 /__pycache__/
+/.ipynb_checkpoints/

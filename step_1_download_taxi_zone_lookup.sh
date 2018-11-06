@@ -12,4 +12,4 @@ then
     exit 0
 fi
 
-curl "$URL" | gzip --best > $FILE
+curl "$URL" > $FILE

@@ -13,8 +13,10 @@ def main():
         print("skipping")
         return
 
+    zone_lookup = pd.read_csv('nyc-taxi-zone-lookup.csv', index_col=0)[:263]
+
     df = load_data(input_file)
-    clean_data(df)
+    clean_data(df, zone_lookup)
     save_dataset(df, output_file)
     print('done')
 
@@ -61,14 +63,13 @@ def load_data(input_file):
         show_progress(len(chunk))
     return df
 
-def clean_data(df):
+def clean_data(df, zone_lookup):
     
     any_location_id_missing = (df.PULocationID > 263) | (df.DOLocationID > 263)
     df = df.drop(df.index[any_location_id_missing])
 
     df.PULocationID.replace([104, 105], 103)
     
-    zone_lookup = pd.read_csv('nyc-taxi-zone-lookup.csv', index_col=0)[:263]
     df['pickup_borough'] = df.PULocationID.apply(zone_lookup.Borough.get).astype('category')
     df['pickup_zone'] = df.PULocationID.apply(zone_lookup.Zone.get).astype('category')
     df['pickup_service_zone'] = df.PULocationID.apply(zone_lookup.service_zone.get).astype('category')

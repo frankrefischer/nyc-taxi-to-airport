@@ -16,7 +16,7 @@ def main():
     zone_lookup = pd.read_csv('nyc-taxi-zone-lookup.csv', index_col=0)[:263]
 
     df = load_data(input_file)
-    clean_data(df, zone_lookup)
+    df = clean_data(df, zone_lookup)
     save_dataset(df, output_file)
     print('done')
 
@@ -73,7 +73,7 @@ def clean_data(df, zone_lookup):
     df['pickup_borough'] = df.PULocationID.apply(zone_lookup.Borough.get).astype('category')
     df['pickup_zone'] = df.PULocationID.apply(zone_lookup.Zone.get).astype('category')
     df['pickup_service_zone'] = df.PULocationID.apply(zone_lookup.service_zone.get).astype('category')
-    df['dropff_zone'] = df.DOLocationID.apply(zone_lookup.Zone.get).astype('category')
+    df['dropoff_zone'] = df.DOLocationID.apply(zone_lookup.Zone.get).astype('category')
     
     df = df.drop(columns=['PULocationID', 'DOLocationID'])
     

@@ -6,8 +6,16 @@ import os
 def main():
     print('=== nyc taxi to airport - step 4 feature engineering')
 
-    input_file = 'nyc-2017-yellow-taxi-trips-to-airport.pkl.gz'
-    output_file = 'nyc-2017-yellow-taxi-trips-to-airport-expanded.pkl.gz'
+    step_4_a_expand('nyc-2017-yellow-taxi-trips-to-airport.pkl.gz',
+                    'nyc-2017-yellow-taxi-trips-to-airport-expanded.pkl.gz')
+    
+    step_4_b_one_hot_encode('nyc-2017-yellow-taxi-trips-to-airport-expanded.pkl.gz',
+                           'nyc-2017-yellow-taxi-trips-to-airport-one-hot-encoded.pkl.gz')    
+    print('done')
+
+def step_4_a_expand(input_file, output_file):
+    print('=== nyc taxi to airport - step 4a expanding variables')
+
     if os.path.exists(output_file):
         print("output file exists:", output_file)
         print("skipping")
@@ -20,8 +28,23 @@ def main():
     df.info(memory_usage='deep')
     
     save_dataset(df, output_file)
-    print('done')
+    
+def step_4_b_one_hot_encode(input_file, output_file):
+    print('=== nyc taxi to airport - step 4b one hot encode')
 
+    if os.path.exists(output_file):
+        print("output file exists:", output_file)
+        print("skipping")
+        return
+
+    print('loading file:', input_file)
+    df = pd.read_pickle(input_file)
+    
+    df = one_hot_encode(df)
+    df.info(memory_usage='deep')
+    
+    save_dataset(df, output_file)
+    
 def expand_features(df):
     
     print("expanding location ids to zones")
@@ -43,16 +66,18 @@ def expand_features(df):
     df['dropoff_hour'] = df.dropoff_datetime.dt.hour.astype('category')
     
     print("adding trip duration")
-    df['trip_duration_minutes'] = (df.dropoff_datetime - df.pickup_datetime).dt.total_seconds() / 60
-    
-    print("one hot encoding")
-    one_hot = pd.get_dummies(df[['pickup_borough', 'pickup_zone', 'pickup_service_zone',
-                                 'dropoff_month', 'drop_off_week_of_year',
-                                 'dropoff_day_of_year','dropoff_day_of_month',
-                                 'dropoff_hour']])
-    df = df.join(one_hot)
+    df['trip_duration_minutes'] = (df.dropoff_datetime -df.pickup_datetime).dt.total_seconds() / 60
     
     return df
+
+def one_hot_encode(df):
+    to_encode = ['pickup_borough', 'pickup_zone', 'pickup_service_zone',
+                 'dropoff_month', 'drop_off_week_of_year',
+                 'dropoff_day_of_year','dropoff_day_of_month',
+                 'dropoff_hour']
+    print("one hot encoding:", to_encode)
+    
+    return pd.get_dummies(df[to_encode])
 
 def save_dataset(df, filepath):
     print('saving file:', filepath)

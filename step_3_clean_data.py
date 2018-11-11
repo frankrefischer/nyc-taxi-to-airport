@@ -39,6 +39,7 @@ def load_data(input_file):
         'tpep_dropoff_datetime',
         'PULocationID',
         'DOLocationID',
+        'trip_distance',
     ]
     data_types = {
         'PULocationID': np.int16,
@@ -65,6 +66,8 @@ def clean_data(df):
     
     any_location_id_missing = (df.PULocationID > 263) | (df.DOLocationID > 263)
     df = df.drop(df.index[any_location_id_missing])
+    
+    df = df[df.tpep_dropoff_datetime > df.tpep_pickup_datetime]
 
     df.PULocationID.replace([104, 105], 103)
     

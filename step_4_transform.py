@@ -4,7 +4,7 @@ import time
 import os
 
 input_file = 'nyc-2017-yellow-taxi-trips-to-airport.pkl.gz'
-output_file = 'nyc-2017-yellow-taxi-trips-to-airport-expanded.pkl.gz'
+output_file = 'nyc-2017-yellow-taxi-trips-to-airport-transformed.pkl.gz'
 
 def main():
     """Loads the cleaned data for taxi trips to airports from step 3, transforms it and saves the result.

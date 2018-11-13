@@ -12,4 +12,9 @@ then
     exit 0
 fi
 
+echo "downloading from url: $URL"
+echo "compressing and writing to file: $FILE"
+
 curl "$URL" | gzip --best > $FILE
+
+echo "done"

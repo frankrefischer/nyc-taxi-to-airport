@@ -1,6 +1,6 @@
 *.csv
 *.gz
 *.png
-/old/
+old/**
 /__pycache__/
 /.ipynb_checkpoints/

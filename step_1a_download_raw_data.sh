@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo '=== nyc taxi to airport - step 1 download raw data'
+echo '=== nyc taxi to airport - step 1a download raw data'
 echo
 
 URL='https://data.cityofnewyork.us/api/views/biws-g3hs/rows.csv?accessType=DOWNLOAD'

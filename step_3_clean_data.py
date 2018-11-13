@@ -38,7 +38,7 @@ def main():
 
     df = load_data(input_file)
     df = clean_data(df)
-    save_dataset(df, output_file)
+    save_as_pickle_gz(df, output_file)
     
     print('done')
 

@@ -27,7 +27,7 @@ def main():
         return
 
     df = load_dataset(input_file, filter_trips_to_airports)
-    save_dataset(df, output_file)
+    save_as_csv_gz(df, output_file)
     
     print('done')
 

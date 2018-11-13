@@ -25,6 +25,7 @@ def main():
     
     Returns: -
     """
+    
     print('=== nyc taxi to airport - step 3 clean data')
 
     if os.path.exists(output_file):
@@ -38,21 +39,7 @@ def main():
     
     print('done')
 
-def make_show_progress():
-    start_time = time.time()
-    lines_read = 0
 
-    def show_progress(chunk_length):
-        nonlocal lines_read
-
-        lines_read += chunk_length
-        elapsed_time = int(time.time() - start_time)
-        print('{:,} lines read | time {:,}s'.format(lines_read, elapsed_time))
-
-    return show_progress
-
-def load_data(input_file):
-    print('loading file:', input_file)
     cols_to_use = [
         'Unnamed: 0',
         'tpep_pickup_datetime',
@@ -65,6 +52,21 @@ def load_data(input_file):
         'PULocationID': np.int16,
         'DOLocationID': np.int16,
     }
+
+def load_data(input_file):
+    """Loads the dataframe from input_file.
+
+    The file will be loaded with pandas.read_csv with a chunksize of 100_000
+
+    To speed up, the following transformations are done while loading:
+
+    Keyword Arguments:
+    input_file -- the filepath of the input file to read
+    
+    Returns: the loaded dataframe
+    
+    """
+    print('loading file:', input_file)
     dates_to_parse = ['tpep_pickup_datetime', 'tpep_dropoff_datetime']
     df = pd.DataFrame()
     show_progress = make_show_progress()
@@ -81,6 +83,22 @@ def load_data(input_file):
         df = pd.concat([df, chunk])
         show_progress(len(chunk))
     return df
+
+def make_show_progress():
+    """
+    """
+    
+    start_time = time.time()
+    lines_read = 0
+
+    def show_progress(chunk_length):
+        nonlocal lines_read
+
+        lines_read += chunk_length
+        elapsed_time = int(time.time() - start_time)
+        print('{:,} lines read | time {:,}s'.format(lines_read, elapsed_time))
+
+    return show_progress
 
 def clean_data(df):
     

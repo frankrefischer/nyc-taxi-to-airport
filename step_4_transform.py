@@ -148,7 +148,7 @@ def add_trip_velocity(df):
     """Adding new variable for trip velocity (in miles per hour)."""
 
     print("adding trip velocity")
-    df['trip_duration_velocity'] = df.trip_distance / df.trip_duration_hours
+    df['trip_velocity'] = df.trip_distance / df.trip_duration_hours
     
     return df
 

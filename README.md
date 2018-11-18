@@ -18,6 +18,21 @@ The other way around: if we need to take Newark Airport, then we should consider
 See [Overview_and_Business_Understanding.ipynb](Overview_and_Business_Understanding.ipynb)
 There you find links to more notebooks. 
 
+## command line tools
+
+To download, clean and prepare the raw data, there are the following command line
+tools available.
+
+### [step_1a_download_raw_data.sh](step_1a_download_raw_data.sh)
+### [step_1b_download_taxi_zone_lookup.sh](step_1b_download_taxi_zone_lookup.sh)
+### [step_2_extract_trips_to_airport.py](step_2_extract_trips_to_airport.py)
+### [step_3_clean_data.py](step_3_clean_data.py)
+### [step_4_transform.py](step_4_transform.py)
+
+You can find details, about their use in the notebooks
+- [Data Understanding](Data_Understanding.ipynb)
+- and [Prepare Data](Prepare_Data.ipynb)
+
 ## Libraries
 - pandas
 - numpy
